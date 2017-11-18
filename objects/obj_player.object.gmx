@@ -54,7 +54,7 @@ x_pos = floor(0.25 * room_width);
           <argument>
             <kind>1</kind>
             <string>key_jump = mouse_check_button_pressed(mb_any);
-
+//changes
 // move back to position if pushed back
 hsp = x &lt;  x_pos;
 
