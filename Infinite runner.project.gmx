@@ -3,24 +3,58 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="1" name="datafiles">
+    <datafile>
+      <name>font_score.font.gmx</name>
+      <exists>-1</exists>
+      <size>8015</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>font_score.font.gmx</filename>
+    </datafile>
+  </datafiles>
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_ground</sprite>
     <sprite>sprites\spr_obstacle</sprite>
+    <sprite>sprites\spr_cursor</sprite>
+    <sprite>sprites\spr_start</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_Init.gml</script>
+    <script>scripts\scr_HTML5_StepScale.gml</script>
+    <script>scripts\scr_SetRes.gml</script>
+  </scripts>
+  <fonts name="fonts">
+    <font>fonts\font_score</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_obstacle_spawner</object>
     <object>objects\obj_ground</object>
     <object>objects\obj_obstacle</object>
     <object>objects\obj_solid</object>
+    <object>objects\obj_menu</object>
+    <object>objects\obj_cursor</object>
+    <object>objects\obj_score</object>
+    <object>objects\obj_main_control</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\room_start</room>
+    <room>rooms\room_game</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
