@@ -31,7 +31,9 @@
     <sprite>sprites\spr_cursor</sprite>
     <sprite>sprites\spr_start</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_Init.gml</script>
@@ -53,7 +55,8 @@
     <object>objects\obj_main_control</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room_start</room>
+    <room>rooms\room_init</room>
+    <room>rooms\room_menu</room>
     <room>rooms\room_game</room>
   </rooms>
   <help>

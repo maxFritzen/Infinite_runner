@@ -36,6 +36,17 @@ if x &gt; room_width x = room_width;
 
 if y &lt; 0 y = 0;
 if y &gt; room_height y = room_height;
+
+//x = median(64, mouse_x, room_width - 64); 
+
+if position_meeting(mouse_x,mouse_y,obj_menu) {
+   window_set_cursor(cr_handpoint);
+}
+
+if !position_meeting(mouse_x,mouse_y,obj_menu){
+    window_set_cursor(cr_default);
+ } 
+
 </string>
           </argument>
         </arguments>
@@ -58,7 +69,7 @@ if y &gt; room_height y = room_height;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*draw_self(); */
+            <string>draw_self(); 
 </string>
           </argument>
         </arguments>

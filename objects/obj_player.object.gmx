@@ -54,6 +54,7 @@ x_pos = floor(0.25 * room_width);
           <argument>
             <kind>1</kind>
             <string>key_jump = mouse_check_button_pressed(mb_any);
+
 //changes
 // move back to position if pushed back
 hsp = x &lt;  x_pos;
@@ -61,10 +62,11 @@ hsp = x &lt;  x_pos;
 // v speed
 vsp = min ( 10, vsp + grav );
 
-//jump off ground
-if (key_jump &amp;&amp; place_meeting(x,y+1,obj_solid))
+//jump off ground &amp;&amp; place_meeting(x,y+1,obj_solid
+if (key_jump )
 {
-   vsp = -jumpspeed;
+    
+    vsp = -jumpspeed;
 }
 // Vertical Collision
 if place_meeting(x, y + round(vsp), obj_solid)

@@ -61,9 +61,11 @@ surface_resize(application_surface, window_get_width(), window_get_height());
 }
 
 // Set the views in the rooms
+
 var i;
 i=true;
 rm=room_next(room)
+
 
 while (i = true)
 {

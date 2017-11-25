@@ -28,19 +28,21 @@
             <string>// This is the main menu object
 // The create event simply positions it within the room
 
-x = room_width / 2;
-y = room_height / 2;
-
+//x = room_width / 2;
+//y = room_height / 2;
+//x = room_width / 2;
+//y = 178;
 // Create the cursor if on Desktop/HTML5
 
 if os_type != os_winphone &amp;&amp; os_type != os_android &amp;&amp; os_type != os_ios
 {
-instance_create(0, 0, obj_cursor);
-}
+    instance_create(0, 0, obj_cursor);
+} 
 
 // Set the GUI size
 
 display_set_gui_size(view_wview[0], view_hview[0]);
+//display_set_gui_size(768, 1024);
 
 </string>
           </argument>
