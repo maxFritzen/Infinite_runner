@@ -31,6 +31,7 @@ hsp = 0;
 vsp = 0;
 jumpspeed = 4;
 x_pos = floor(0.25 * room_width);
+doubleJump = true;
 </string>
           </argument>
         </arguments>
@@ -53,21 +54,32 @@ x_pos = floor(0.25 * room_width);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>key_jump = mouse_check_button_pressed(mb_any);
+            <string>key_jump = device_mouse_check_button_pressed(0, mb_any);
 
 //changes
 // move back to position if pushed back
 hsp = x &lt;  x_pos;
 
 // v speed
-vsp = min ( 10, vsp + grav );
+vsp = min( 10, vsp + grav );
 
 //jump off ground &amp;&amp; place_meeting(x,y+1,obj_solid
-if (key_jump )
+if ((key_jump) &amp;&amp; (place_meeting(x,y+1,obj_solid)))
 {
-    
     vsp = -jumpspeed;
 }
+
+//double jump, Not quite right no
+if ((key_jump) &amp;&amp; (!place_meeting(x, y+1, obj_solid)) &amp;&amp; (doubleJump == true))
+{
+    doubleJump = false;
+    vsp = -jumpspeed;
+}
+else if(place_meeting(x, y + 1, obj_solid))
+{
+    doubleJump = true;
+}    
+
 // Vertical Collision
 if place_meeting(x, y + round(vsp), obj_solid)
 {
